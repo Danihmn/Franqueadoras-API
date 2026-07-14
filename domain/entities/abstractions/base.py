@@ -1,4 +1,8 @@
-from sqlalchemy.orm import DeclarativeBase
+import uuid
+from abc import ABC
+
+from pydantic import BaseModel
 
 
-class Base(DeclarativeBase): ...
+class Base(ABC, BaseModel):
+    id: uuid.UUID
