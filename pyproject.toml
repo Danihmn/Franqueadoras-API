@@ -14,6 +14,7 @@ dependencies = [
     "sqlacodegen-v2>=0.1.4",
     "sqlalchemy[asyncio]>=2.0.51",
     "tzdata>=2026.3",
+    "validate-docbr>=2.0.0",
 ]
 
 [dependency-groups]

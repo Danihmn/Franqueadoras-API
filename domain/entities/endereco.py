@@ -1,5 +1,3 @@
-import uuid
-
 from domain.entities.abstractions.base import Base
 
 
