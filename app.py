@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 
-from infrastructure.exception_handlers import register_exception_handlers
+from infrastructure.handlers.exception_handler import (
+    register_exception_handlers,
+)
 
-app = FastAPI()
+app = FastAPI(title="App for franchise management")
 
 
 register_exception_handlers(app)
