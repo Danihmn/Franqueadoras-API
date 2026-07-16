@@ -1,6 +1,6 @@
 from validate_docbr import CNPJ as CNPJValidator
 
-from domain.exceptions.value_objects import CNPJException
+from domain.exceptions.cnpj import CNPJException
 
 cnpj = CNPJValidator()
 

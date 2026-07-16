@@ -1,4 +1,4 @@
-from domain.exceptions.base import DomainException
+from domain.exceptions.domain import DomainException
 
 
 class CNPJException(DomainException):

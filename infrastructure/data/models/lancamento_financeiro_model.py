@@ -15,7 +15,7 @@ from sqlalchemy import (
 )
 from sqlalchemy.orm import Mapped, mapped_column
 
-from core.data.models.abstractions.base_model import BaseModel
+from infrastructure.data.models.abstractions.base_model import BaseModel
 
 
 class LancamentoFinanceiroModel(BaseModel):

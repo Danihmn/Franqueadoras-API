@@ -3,7 +3,7 @@ import uuid
 from sqlalchemy import PrimaryKeyConstraint, String, Uuid, text
 from sqlalchemy.orm import Mapped, mapped_column
 
-from core.data.models.abstractions.base_model import BaseModel
+from infrastructure.data.models.abstractions.base_model import BaseModel
 
 
 class EnderecoModel(BaseModel):
