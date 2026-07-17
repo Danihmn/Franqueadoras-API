@@ -1,10 +1,18 @@
-from fastapi import FastAPI
+from http import HTTPStatus
 
-from infrastructure.handlers.exception_handler import (
-    register_exception_handlers,
-)
+from fastapi import FastAPI, Request
+from starlette.responses import JSONResponse
+
+from domain.exceptions.domain import DomainException
 
 app = FastAPI(title="App for franchise management")
 
 
-register_exception_handlers(app)
+@app.exception_handler(DomainException)
+def domain_exception_handler(
+    request: Request, exc: DomainException
+) -> JSONResponse:
+    return JSONResponse(
+        status_code=HTTPStatus.UNPROCESSABLE_ENTITY,
+        content={"detail": exc.message},
+    )
