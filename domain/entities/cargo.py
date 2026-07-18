@@ -1,8 +1,9 @@
 import uuid
 
 from domain.entities.abstractions.base import Base
+from domain.validators.text import NON_BLANK_STR
 
 
 class Cargo(Base):
     franqueadora_id: uuid.UUID
-    descricao: str
+    descricao: NON_BLANK_STR

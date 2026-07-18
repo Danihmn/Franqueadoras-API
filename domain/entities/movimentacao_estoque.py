@@ -3,6 +3,8 @@ import uuid
 
 from domain.entities.abstractions.base import Base
 from domain.enums.movimentacao_estoque_tipo import MovimentacaoEstoqueTipo
+from domain.validators.inventory_movement import QUANTITY
+from domain.validators.text import NON_BLANK_STR
 
 
 class MovimentacaoEstoque(Base):
@@ -10,6 +12,6 @@ class MovimentacaoEstoque(Base):
     franquia_id: uuid.UUID
     produto_id: uuid.UUID
     tipo: MovimentacaoEstoqueTipo
-    quantidade: int
+    quantidade: QUANTITY
     data_movimentacao: datetime.datetime
-    motivo: str
+    motivo: NON_BLANK_STR
